@@ -1,4 +1,4 @@
-# Web Development Workshop Repository
+# Web Development Workshop 
 
 Welcome to the repository for the Web Development Workshop conducted in February 2024. This repository contains all the presentations, project materials, and resources used throughout the workshop. Below is a guide to the contents of this repository:
 
