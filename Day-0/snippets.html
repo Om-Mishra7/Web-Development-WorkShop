@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+        <html>
+        <head>
+            <meta charset="UTF-8">
+            <title>Web Development Workshop - Hack On Campus &verbar; K&period;R&period; Mangalam University</title>
+            <style>
+/* From extension vscode.github */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.vscode-dark img[src$=\#gh-light-mode-only],
+.vscode-light img[src$=\#gh-dark-mode-only] {
+	display: none;
+}
+
+</style>
+            
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+<style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        <style>
+.task-list-item {
+    list-style-type: none;
+}
+
+.task-list-item-checkbox {
+    margin-left: -20px;
+    vertical-align: middle;
+    pointer-events: none;
+}
+</style>
+<style>
+:root {
+  --color-note: #0969da;
+  --color-tip: #1a7f37;
+  --color-warning: #9a6700;
+  --color-severe: #bc4c00;
+  --color-caution: #d1242f;
+  --color-important: #8250df;
+}
+
+</style>
+<style>
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-note: #2f81f7;
+    --color-tip: #3fb950;
+    --color-warning: #d29922;
+    --color-severe: #db6d28;
+    --color-caution: #f85149;
+    --color-important: #a371f7;
+  }
+}
+
+</style>
+<style>
+.markdown-alert {
+  padding: 0.5rem 1rem;
+  margin-bottom: 16px;
+  color: inherit;
+  border-left: .25em solid #888;
+}
+
+.markdown-alert>:first-child {
+  margin-top: 0
+}
+
+.markdown-alert>:last-child {
+  margin-bottom: 0
+}
+
+.markdown-alert .markdown-alert-title {
+  display: flex;
+  font-weight: 500;
+  align-items: center;
+  line-height: 1
+}
+
+.markdown-alert .markdown-alert-title .octicon {
+  margin-right: 0.5rem;
+  display: inline-block;
+  overflow: visible !important;
+  vertical-align: text-bottom;
+  fill: currentColor;
+}
+
+.markdown-alert.markdown-alert-note {
+  border-left-color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-note .markdown-alert-title {
+  color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-important {
+  border-left-color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-important .markdown-alert-title {
+  color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-warning {
+  border-left-color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-warning .markdown-alert-title {
+  color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-tip {
+  border-left-color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-tip .markdown-alert-title {
+  color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-caution {
+  border-left-color: var(--color-caution);
+}
+
+.markdown-alert.markdown-alert-caution .markdown-alert-title {
+  color: var(--color-caution);
+}
+
+</style>
+        
+        </head>
+        <body class="vscode-body vscode-light">
+            <h1 id="web-development-workshop---hack-on-campus--kr-mangalam-university">Web Development Workshop - Hack On Campus | K.R. Mangalam University</h1>
+<p>Organized by: Om Mishra | <a href="https://github.com/Om-Mishra7">GitHub</a> and Yash Soni | <a href="https://github.com/Yash-Soni774">GitHub</a></p>
+<h2 id="html">HTML</h2>
+<p>HyperText Markup Language, is the standard markup language for describing the structure of web pages like headings, paragraphs, lists, links, images, etc.</p>
+<h3 id="html-demo-page">HTML Demo Page</h3>
+<p>A simple HTML page looks like this and is saved with a <code>.html</code> extension, this is just code that is parsed by the web browser to display the content in a human-readable format.</p>
+<pre><code class="language-html"><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-keyword">html</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>HTML<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+    Hello, World 🌍!
+<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+</code></pre>
+<p>Even without knowing HTML, you can probably guess what some of the things in this file do, e.g. <code>&lt;title&gt;</code> sets the title of the page, <code>&lt;body&gt;</code> contains the content of the page, etc.</p>
+<h3 id="detailed-explanation-of-the-demo-html-page">Detailed Explanation of the Demo HTML Page</h3>
+<p>The first line, <code>&lt;!DOCTYPE html&gt;</code>, is the document type declaration and it is required for all HTML documents. It tells the web browser about the version of HTML used in the document HTML5 in this case.</p>
+<p>The 'lang' attribute in the opening <code>&lt;html&gt;</code> tag is used to declare the language of the Web page. It is used by screen readers and other assistive technologies to determine the language of the content.</p>
+<p>The <code>&lt;head&gt;</code> element contains meta-information about the document, such as its title and links to its scripts and style sheets.</p>
+<p>The <code>&lt;title&gt;</code> element is required and it defines the title of the document, which is shown in the browser's title bar or in the page's tab.</p>
+<p>The <code>&lt;body&gt;</code> element contains the document's actual content, which is visible to the users.</p>
+<p>The HTML comments are used to add notes to the HTML source code. The comments are not displayed in the web browsers, and can be used to explain the code, or to prevent execution, when testing alternative code. e.g. <code>&lt;!-- This is a comment --&gt;</code></p>
+<h3 id="document-object-model-dom">Document Object Model (DOM)</h3>
+<p>The Document Object Model (DOM) is a way of representing the structure of an HTML document in a tree-like form, it's useful for understanding how the HTML is structured and later on for manipulating the HTML using JavaScript.</p>
+<p>The DOM of the HTML document above looks like this:</p>
+<pre><code>- html
+    - head
+        - title
+            - &quot;HTML&quot;
+    - body
+        - &quot;Hello, World 🌍!&quot;
+</code></pre>
+<h3 id="html-tags">HTML Tags</h3>
+<p>HTML tags are used to define HTML elements. An HTML element is defined by a start tag, some content, and an end tag:</p>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">tagname</span>&gt;</span>Content goes here...<span class="hljs-tag">&lt;/<span class="hljs-name">tagname</span>&gt;</span>
+</code></pre>
+<p>Let's look at some of the most commonly used HTML tags:</p>
+<ul>
+<li>Heading tags: These are big banners that are used to define headings and subheadings in the HTML document. There are six levels of headings from <code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code>. An simple example of heading tags is:</li>
+</ul>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>This is a heading<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>This is a subheading<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+</code></pre>
+<ul>
+<li>List tags: These are used to define lists in HTML. There are two types of lists in HTML, ordered and unordered. An example of list tags is:</li>
+</ul>
+<pre><code class="language-html">This is an ordered list:
+<span class="hljs-tag">&lt;<span class="hljs-name">ol</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Item 1<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Item 2<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Item 3<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ol</span>&gt;</span>
+
+This is an unordered list:
+<span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Item 1<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Item 2<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Item 3<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+</code></pre>
+<ul>
+<li>Image tag: This tag is used to define an image in HTML, unlike other tags, it has required attributes like <code>src</code> and <code>alt</code>. An example of an image tag is:</li>
+</ul>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;image.jpg&quot;</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">&quot;This is an image&quot;</span>&gt;</span>
+</code></pre>
+<p>We can also notice that the image tag doesn't have a closing tag, this is because it's a self-closing tag meaning it can't have any content inside it.</p>
+<p>Also, additional attributes like <code>width</code> and <code>height</code> can be added to the image tag to define the size of the image. e.g. <code>&lt;img src=&quot;image.jpg&quot; alt=&quot;This is an image&quot; width=&quot;500&quot; height=&quot;600&quot;&gt;</code></p>
+<ul>
+<li>Anchor tag: On of the most important features of the web is the ability to link to other pages, this is done using the anchor tag. An example of an anchor tag is:</li>
+</ul>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;https://www.google.com&quot;</span>&gt;</span>This is a link to Google<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;/path/to/page&quot;</span>&gt;</span>This is a link to another page<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+</code></pre>
+<p>Just like the image tag, the anchor tag also has a required attribute <code>href</code> (Hypertext Reference) which defines the URL of the page the link goes to.</p>
+<ul>
+<li>Table tag: This tag is used to define a table in HTML, as we can imagine a table is just a collection of rows and columns. An example of a table tag is:</li>
+</ul>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">table</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">thead</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">th</span>&gt;</span>Student ID<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">th</span>&gt;</span>Student Name<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">thead</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">tbody</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>1<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>Ram<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>2<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>Shyam<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">tbody</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">table</span>&gt;</span>
+</code></pre>
+<ul>
+<li>Form tag: Our web pages often need to take input from the user, e.g. login forms, registration forms, etc. This is done using the form tag. An example of a form tag is:</li>
+</ul>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">action</span>=<span class="hljs-string">&quot;/submit-form&quot;</span> <span class="hljs-attr">method</span>=<span class="hljs-string">&quot;post&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;username&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;username&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;password&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;password&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;password&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;submit&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;Submit&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
+</code></pre>
+<p>Another more complex example of a form tag is:</p>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">action</span>=<span class="hljs-string">&quot;/submit-form&quot;</span> <span class="hljs-attr">method</span>=<span class="hljs-string">&quot;post&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;name&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;name&quot;</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">&quot;Name&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;email&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;email&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;email&quot;</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">&quot;Email&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;password&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;password&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;password&quot;</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">&quot;Password&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;radio&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">current_status</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;student&quot;</span>&gt;</span> Student
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;radio&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">current_status</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;teacher&quot;</span>&gt;</span> Teacher
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;course&quot;</span> <span class="hljs-attr">list</span>=<span class="hljs-string">&quot;courses&quot;</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">&quot;Course&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">datalist</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;courses&quot;</span>&gt;</span> <span class="hljs-comment">&lt;!-- This is a list of options for the course input and is built using the datalist tag --&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;B.Tech&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;M.Tech&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;BBA&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;MBA&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">datalist</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;submit&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;Submit&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
+</code></pre>
+<h2 id="css">CSS</h2>
+<p>As of now, we have learned how to structure the content of a web page using HTML, but the content is not very visually appealing. This is where CSS comes in, it is used to tell the web browser how to display the HTML content.</p>
+<h3 id="css-inline-styles">CSS Inline Styles</h3>
+<p>To apply CSS to an HTML element, we can use the <code>style</code> attribute in the HTML tag, the value of the <code>style</code> attribute is a collection of CSS property-value pairs. An example of inline styles is:</p>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;color: red; font-size: 20px;&quot;</span>&gt;</span>This is a paragraph<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+</code></pre>
+<p><b>CSS properties also follow inheritance, meaning that if a parent element has a certain style, the child elements will inherit that style unless they have a style of their own.</b></p>
+<h3 id="css-internal-styles">CSS Internal Styles</h3>
+<p>Let's take the example of the HTML page we created earlier and add some more content with inline styles, this is how the HTML page looks now:</p>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;color: red;&quot;</span>&gt;</span>This is a heading<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;color: red;&quot;</span>&gt;</span>This is a paragraph<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+</code></pre>
+<p>As we can see, we needed to repeat the style for the color red, this is where internal styles come in, we can define the styles in the <code>&lt;head&gt;</code> tag of the HTML document and they will be applied to the entire document. An example of internal styles is:</p>
+<pre><code class="language-html"><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-keyword">html</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>HTML<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="language-css">
+        <span class="hljs-selector-tag">h1</span> {
+            <span class="hljs-attribute">color</span>: red;
+        }
+        <span class="hljs-selector-tag">p</span> {
+            <span class="hljs-attribute">color</span>: red;
+        }
+    </span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>This is a heading<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>This is a paragraph<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+</code></pre>
+<h3 id="css-external-styles">CSS External Styles</h3>
+<p>Internal styles are good for small web pages, but for larger web pages, there may be a lot of shared styles e.g. Every page on a website may have the same header and footer, and it would be inefficient to define the styles for the header and footer on every page. This is where external styles come in, we can define the styles in a separate <code>.css</code> file and link it to the HTML document. An example of external styles is:</p>
+<pre><code class="language-html"><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-keyword">html</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>HTML<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">&quot;stylesheet&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text/css&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;styles.css&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>This is a heading<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>This is a paragraph<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+</code></pre>
+<p>The <code>href</code> attribute in the link tag is the path to the <code>.css</code> file, and the <code>rel</code> attribute is the relationship between the HTML document and the <code>.css</code> file.</p>
+<p>The <code>styles.css</code> file looks like this:</p>
+<pre><code class="language-css"><span class="hljs-selector-tag">h1</span> {
+    <span class="hljs-attribute">color</span>: red;
+}
+<span class="hljs-selector-tag">p</span> {
+    <span class="hljs-attribute">color</span>: red;
+}
+</code></pre>
+<h3 id="common-css-properties">Common CSS Properties</h3>
+<ul>
+<li><code>color</code>: This property is used to set the color of the text content.</li>
+<li><code>font-size</code>: This property is used to set the size of the text content.</li>
+<li><code>background-color</code>: This property is used to set the background color of an element.</li>
+<li><code>border</code>: This property is used to set the border of an element, it can be used to set the width, style, and color of the border.</li>
+<li><code>margin</code>: This property is used to set the margin of an element, it can be used to set the margin on all sides or individually.</li>
+<li><code>padding</code>: This property is used to set the padding of an element, it can be used to set the padding on all sides or individually.</li>
+<li><code>text-align</code>: This property is used to set the alignment of the text content.</li>
+<li><code>font-family</code>: This property is used to set the font of the text content.</li>
+<li><code>font-weight</code>: This property is used to set the weight of the text content, e.g. bold, normal, etc.</li>
+</ul>
+<p>An example of using these properties is:</p>
+<pre><code class="language-css"><span class="hljs-selector-tag">h1</span> {
+    <span class="hljs-attribute">color</span>: red;
+    <span class="hljs-attribute">font-size</span>: <span class="hljs-number">20px</span>;
+    <span class="hljs-attribute">background-color</span>: yellow;
+    <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid black;
+    <span class="hljs-attribute">margin</span>: <span class="hljs-number">10px</span>;
+    <span class="hljs-attribute">padding</span>: <span class="hljs-number">10px</span>;
+    <span class="hljs-attribute">text-align</span>: center;
+    <span class="hljs-attribute">font-family</span>: Arial, sans-serif;
+    <span class="hljs-attribute">font-weight</span>: bold;
+}
+
+<span class="hljs-selector-tag">div</span> {
+    <span class="hljs-attribute">color</span>: blue;
+    <span class="hljs-attribute">font-size</span>: <span class="hljs-number">20px</span>;
+    <span class="hljs-attribute">background-color</span>: green;
+    <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid black;
+    <span class="hljs-attribute">margin</span>: <span class="hljs-number">10px</span>;
+    <span class="hljs-attribute">padding</span>: <span class="hljs-number">10px</span>;
+    <span class="hljs-attribute">text-align</span>: center;
+    <span class="hljs-attribute">font-family</span>: Arial, sans-serif;
+    <span class="hljs-attribute">font-weight</span>: bold;
+}
+</code></pre>
+<pre><code class="language-html"><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-keyword">html</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>HTML<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">&quot;stylesheet&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text/css&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;styles.css&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>This is a heading<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>This is a div<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+</code></pre>
+<p>Now let's apply some styles to the table tag we learned about earlier:</p>
+<pre><code class="language-css"><span class="hljs-selector-tag">table</span> {
+    <span class="hljs-attribute">border-collapse</span>: collapse; <span class="hljs-comment">/* This property is used to collapse the borders of the table, making it look like a single border */</span>
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
+    <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid black;
+}
+
+<span class="hljs-selector-tag">th</span> {
+    <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid black;
+    <span class="hljs-attribute">padding</span>: <span class="hljs-number">8px</span>;
+    <span class="hljs-attribute">text-align</span>: center;
+}
+
+<span class="hljs-selector-tag">td</span> {
+    <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid black;
+    <span class="hljs-attribute">padding</span>: <span class="hljs-number">8px</span>;
+    <span class="hljs-attribute">text-align</span>: center;
+}
+
+</code></pre>
+<p>As we can see we need to apply the same styles to the <code>th</code> and <code>td</code> tags, as discussed earlier, we should try to avoid repeating the same styles, this is where CSS Selectors come in to play.</p>
+<h3 id="css-selectors">CSS Selectors</h3>
+<p>CSS selectors are used to select the HTML elements we want to style, there are many types of selectors, some of the most commonly used ones are:</p>
+<ul>
+<li>Grouping Selector: This is used to group multiple selectors together, e.g. <code>h1, p, div</code>.</li>
+<li>Element Selector: This is used to select all the elements of a particular type, e.g. <code>h1</code>, <code>p</code>, <code>div</code>, etc.</li>
+<li>Class Selector: This is used to select elements with a particular class, e.g. <code>.class-name</code>.</li>
+<li>ID Selector: This is used to select an element with a particular ID, e.g. <code>#id-name</code>.</li>
+<li>Descendant Selector: This is used to select an element that is a descendant of another element, e.g. <code>div p</code>.</li>
+<li>Child Selector: This is used to select an element that is a child of another element, e.g. <code>div &gt; p</code>.</li>
+<li>Attribute Selector: This is used to select elements with a particular attribute, e.g. <code>input[type=&quot;text&quot;]</code>.</li>
+<li>Pseudo-class Selector: This is used to select elements based on their state, e.g. <code>a:hover</code>.</li>
+<li>Pseudo-element Selector: This is used to select a part of an element, e.g. <code>p::first-line</code>.</li>
+<li>Universal Selector: This is used to select all the elements on the page, e.g. <code>*</code>.</li>
+</ul>
+
+            
+            
+        </body>
+        </html>
