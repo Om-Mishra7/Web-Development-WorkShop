@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+        <html>
+        <head>
+            <meta charset="UTF-8">
+            <title>Web Development Workshop - Hack On Campus &verbar; K&period;R&period; Mangalam University</title>
+            <style>
+/* From extension vscode.github */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.vscode-dark img[src$=\#gh-light-mode-only],
+.vscode-light img[src$=\#gh-dark-mode-only] {
+	display: none;
+}
+
+</style>
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css">
+<link href="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+<style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        <style>
+.task-list-item {
+    list-style-type: none;
+}
+
+.task-list-item-checkbox {
+    margin-left: -20px;
+    vertical-align: middle;
+    pointer-events: none;
+}
+</style>
+<style>
+:root {
+  --color-note: #0969da;
+  --color-tip: #1a7f37;
+  --color-warning: #9a6700;
+  --color-severe: #bc4c00;
+  --color-caution: #d1242f;
+  --color-important: #8250df;
+}
+
+</style>
+<style>
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-note: #2f81f7;
+    --color-tip: #3fb950;
+    --color-warning: #d29922;
+    --color-severe: #db6d28;
+    --color-caution: #f85149;
+    --color-important: #a371f7;
+  }
+}
+
+</style>
+<style>
+.markdown-alert {
+  padding: 0.5rem 1rem;
+  margin-bottom: 16px;
+  color: inherit;
+  border-left: .25em solid #888;
+}
+
+.markdown-alert>:first-child {
+  margin-top: 0
+}
+
+.markdown-alert>:last-child {
+  margin-bottom: 0
+}
+
+.markdown-alert .markdown-alert-title {
+  display: flex;
+  font-weight: 500;
+  align-items: center;
+  line-height: 1
+}
+
+.markdown-alert .markdown-alert-title .octicon {
+  margin-right: 0.5rem;
+  display: inline-block;
+  overflow: visible !important;
+  vertical-align: text-bottom;
+  fill: currentColor;
+}
+
+.markdown-alert.markdown-alert-note {
+  border-left-color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-note .markdown-alert-title {
+  color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-important {
+  border-left-color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-important .markdown-alert-title {
+  color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-warning {
+  border-left-color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-warning .markdown-alert-title {
+  color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-tip {
+  border-left-color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-tip .markdown-alert-title {
+  color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-caution {
+  border-left-color: var(--color-caution);
+}
+
+.markdown-alert.markdown-alert-caution .markdown-alert-title {
+  color: var(--color-caution);
+}
+
+</style>
+        
+        </head>
+        <body class="vscode-body vscode-light">
+            <h1 id="web-development-workshop---hack-on-campus--kr-mangalam-university">Web Development Workshop - Hack On Campus | K.R. Mangalam University</h1>
+<p>Organized by: Om Mishra | <a href="https://github.com/Om-Mishra7">GitHub</a> and Yash Soni | <a href="https://github.com/Yash-Soni774">GitHub</a></p>
+<h2 id="python">Python</h2>
+<p>We will now start with our first language of this workshop, Python. Python allows us to build application quickly because of lots of inbuilt libraries and frameworks,  we will be introducing you to Python today and some of it's advanced topics.</p>
+<h3 id="hello-world">Hello World</h3>
+<pre><code class="language-python"><span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Hello, World!&quot;</span>)
+</code></pre>
+<p>This is how you print something in python. The <code>print</code> function is used to print something on the screen, and the thing inside the parenthesis we provide a argument to the function. In this case, we are providing a string &quot;Hello, World!&quot;.</p>
+<p>Now the file is saved as <code>hello.py</code>, .py is the extension of python files. To run the file, open the terminal and type <code>python hello.py</code> and press enter. You will see the output as <code>Hello, World!</code> on the terminal.</p>
+<p>The <code>python command</code> is used to run the python files. As python is an interpreted language, the python interpreter reads the file line by line and executes it.</p>
+<pre><code class="language-bash">$ python hello.py
+Hello, World!
+</code></pre>
+<h3 id="variables">Variables</h3>
+<p>Like any other programming language, Python also has variables. Variables are used to store data. In python, we don't need to specify the type of the variable, python automatically detects the type of the variable.</p>
+<pre><code class="language-python">integer_variable = <span class="hljs-number">10</span>
+string_variable = <span class="hljs-string">&quot;Hello, World!&quot;</span>
+float_variable = <span class="hljs-number">10.5</span>
+boolean_variable = <span class="hljs-literal">True</span>
+none_variable = <span class="hljs-literal">None</span> <span class="hljs-comment"># None is a special type in python, it is used to represent the absence of a value.</span>
+</code></pre>
+<h3 id="input-in-python">Input in Python</h3>
+<pre><code class="language-python">name = <span class="hljs-built_in">input</span>(<span class="hljs-string">&quot;Enter your name: &quot;</span>)
+<span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Hello, &quot;</span> + name) <span class="hljs-comment"># `+` is used to concatenate strings</span>
+</code></pre>
+<p>The <code>input</code> function is used to take input from the user. The argument to the input function is the prompt that will be shown to the user. The input function returns the input given by the user as a string.</p>
+<p>We can also use the f-strings to format the string.</p>
+<pre><code class="language-python">name = <span class="hljs-built_in">input</span>(<span class="hljs-string">&quot;Enter your name: &quot;</span>)
+<span class="hljs-built_in">print</span>(<span class="hljs-string">f&quot;Hello, <span class="hljs-subst">{name}</span>&quot;</span>)
+</code></pre>
+<h3 id="conditional-statements">Conditional Statements</h3>
+<p>In addition to variables, python also has conditional statements. Conditional statements are used to execute a block of code based on some condition.</p>
+<pre><code class="language-python">number = <span class="hljs-built_in">input</span>(<span class="hljs-string">&quot;Enter your number: &quot;</span>)
+<span class="hljs-keyword">if</span> number &gt; <span class="hljs-number">0</span>:
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;The number is positive&quot;</span>)
+<span class="hljs-keyword">else</span>:
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;The number is negative&quot;</span>)
+</code></pre>
+<p>The condition in python begins with <code>if</code> keyword, followed by the condition and a colon. The block of code to be executed if the condition is true is indented. The <code>else</code> keyword is used to execute a block of code if the condition is false.</p>
+<p>The indentation is very important in python, it is used to define the block of code. The standard indentation is 4 spaces.</p>
+<p>We can also use the <code>elif</code> keyword to check multiple conditions.</p>
+<pre><code class="language-python">number = <span class="hljs-built_in">int</span>(<span class="hljs-built_in">input</span>(<span class="hljs-string">&quot;Enter your number: &quot;</span>))
+<span class="hljs-keyword">if</span> number &gt; <span class="hljs-number">0</span>:
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;The number is positive&quot;</span>)
+<span class="hljs-keyword">elif</span> number == <span class="hljs-number">0</span>:
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;The number is zero&quot;</span>)
+<span class="hljs-keyword">else</span>:
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;The number is negative&quot;</span>)
+</code></pre>
+<h3 id="sequence-data-types">Sequence Data Types</h3>
+<p>Python has many inbuilt sequence data types. The most common ones are strings, lists, and tuples.</p>
+<h4 id="strings">Strings</h4>
+<p>Strings are used to store text data. Strings are immutable, which means once a string is created, it cannot be changed.</p>
+<pre><code class="language-python">string = <span class="hljs-string">&quot;Hello, World!&quot;</span>
+<span class="hljs-built_in">print</span>(string[<span class="hljs-number">0</span>]) <span class="hljs-comment"># H</span>
+<span class="hljs-built_in">print</span>(string[<span class="hljs-number">7</span>]) <span class="hljs-comment"># W</span>
+<span class="hljs-built_in">print</span>(string[<span class="hljs-number">0</span>:<span class="hljs-number">5</span>]) <span class="hljs-comment"># Hello</span>
+<span class="hljs-built_in">print</span>(string[<span class="hljs-number">7</span>:]) <span class="hljs-comment"># World!</span>
+</code></pre>
+<h4 id="lists">Lists</h4>
+<p>Lists are used to store multiple items in a single variable. Lists are mutable, which means the items in the list can be changed.</p>
+<pre><code class="language-python"><span class="hljs-built_in">list</span> = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>]
+<span class="hljs-built_in">print</span>(<span class="hljs-built_in">list</span>[<span class="hljs-number">0</span>]) <span class="hljs-comment"># 1</span>
+<span class="hljs-built_in">print</span>(<span class="hljs-built_in">list</span>[<span class="hljs-number">2</span>]) <span class="hljs-comment"># 3</span>
+<span class="hljs-built_in">print</span>(<span class="hljs-built_in">list</span>[<span class="hljs-number">0</span>:<span class="hljs-number">3</span>]) <span class="hljs-comment"># [1, 2, 3]</span>
+<span class="hljs-built_in">print</span>(<span class="hljs-built_in">list</span>[<span class="hljs-number">2</span>:]) <span class="hljs-comment"># [3, 4, 5]</span>
+
+<span class="hljs-comment"># Adding a new item to the list</span>
+<span class="hljs-built_in">list</span>.append(<span class="hljs-number">6</span>)
+
+<span class="hljs-comment"># Sorting the list</span>
+<span class="hljs-built_in">list</span>.sort()
+</code></pre>
+<h4 id="tuples">Tuples</h4>
+<p>Tuples are used to store multiple items in a single variable. Tuples are immutable, which means the items in the tuple cannot be changed. e.g. coordinates, colors, etc.</p>
+<pre><code class="language-python"><span class="hljs-built_in">tuple</span> = (<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>)
+<span class="hljs-built_in">print</span>(<span class="hljs-built_in">tuple</span>[<span class="hljs-number">0</span>]) <span class="hljs-comment"># 1</span>
+<span class="hljs-built_in">print</span>(<span class="hljs-built_in">tuple</span>[<span class="hljs-number">2</span>]) <span class="hljs-comment"># 3</span>
+<span class="hljs-built_in">print</span>(<span class="hljs-built_in">tuple</span>[<span class="hljs-number">0</span>:<span class="hljs-number">3</span>]) <span class="hljs-comment"># (1, 2, 3)</span>
+<span class="hljs-built_in">print</span>(<span class="hljs-built_in">tuple</span>[<span class="hljs-number">2</span>:]) <span class="hljs-comment"># (3, 4, 5)</span>
+</code></pre>
+<h3 id="sets">Sets</h3>
+<p>Sets are used to store multiple items in a single variable. Sets are immutable, unordered and unindexed, which means the items in the set can appear in any order. They are similar to the concept of sets in mathematics.</p>
+<pre><code class="language-python"><span class="hljs-built_in">set</span> = {<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>}
+<span class="hljs-built_in">print</span>(<span class="hljs-built_in">set</span>) <span class="hljs-comment"># {1, 2, 3, 4, 5}</span>
+<span class="hljs-built_in">set</span>.add(<span class="hljs-number">5</span>)
+<span class="hljs-built_in">print</span>(<span class="hljs-built_in">set</span>) <span class="hljs-comment"># {1, 2, 3, 4, 5}</span>
+
+<span class="hljs-built_in">set</span>.remove(<span class="hljs-number">2</span>)
+
+<span class="hljs-built_in">print</span>(<span class="hljs-string">f&quot;The length of the set is <span class="hljs-subst">{<span class="hljs-built_in">len</span>(<span class="hljs-built_in">set</span>)}</span>&quot;</span>) <span class="hljs-comment"># The length of the set is 4</span>
+</code></pre>
+<h3 id="dictionaries">Dictionaries</h3>
+<p>Just like a dictionary, a dictionary in python is used to store key-value pairs. Dictionaries are mutable, which means the items in the dictionary can be changed.</p>
+<pre><code class="language-python">dictionary = {
+    <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;John&quot;</span>,
+    <span class="hljs-string">&quot;age&quot;</span>: <span class="hljs-number">30</span>,
+    <span class="hljs-string">&quot;city&quot;</span>: <span class="hljs-string">&quot;New York&quot;</span>
+}
+<span class="hljs-built_in">print</span>(dictionary[<span class="hljs-string">&quot;name&quot;</span>]) <span class="hljs-comment"># John</span>
+<span class="hljs-built_in">print</span>(dictionary[<span class="hljs-string">&quot;age&quot;</span>]) <span class="hljs-comment"># 30</span>
+
+<span class="hljs-comment"># Adding a new key-value pair</span>
+dictionary[<span class="hljs-string">&quot;email&quot;</span>] = <span class="hljs-string">&quot;test@example.com&quot;</span>
+<span class="hljs-built_in">print</span>(dictionary) <span class="hljs-comment"># {&#x27;name&#x27;: &#x27;John&#x27;, &#x27;age&#x27;: 30, &#x27;city&#x27;: &#x27;New York&#x27;, &#x27;email&#x27;: &#x27;</span>
+</code></pre>
+<h3 id="loops">Loops</h3>
+<p>The idea of a loop is to repeat a set of statements as long as the condition is true, python has two types of loops, <code>for</code> and <code>while</code>.</p>
+<h4 id="for-loop">For Loop</h4>
+<p>The <code>for</code> loop is used to iterate over a sequence (list, tuple, string, etc.) or other iterable objects.</p>
+<pre><code class="language-python"><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>]:
+    <span class="hljs-built_in">print</span>(i)
+</code></pre>
+<p>For large sequences, we can use the <code>range</code> function.</p>
+<pre><code class="language-python"><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">1000</span>):
+    <span class="hljs-built_in">print</span>(i)
+</code></pre>
+<p>The <code>range</code> function is used to generate a sequence of numbers. The <code>range</code> function takes 3 arguments, <code>start</code>, <code>stop</code>, and <code>step</code>. The <code>start</code> argument is optional and the default value is 0, the <code>step</code> argument is also optional and the default value is 1.</p>
+<pre><code class="language-python"><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">1</span>, <span class="hljs-number">10</span>, <span class="hljs-number">2</span>):
+    <span class="hljs-built_in">print</span>(i)
+</code></pre>
+<h4 id="while-loop">While Loop</h4>
+<p>The <code>while</code> loop is used to execute a block of code as long as the condition is true.</p>
+<pre><code class="language-python">i = <span class="hljs-number">1</span>
+<span class="hljs-keyword">while</span> i &lt; <span class="hljs-number">6</span>:
+    <span class="hljs-built_in">print</span>(i)
+    i += <span class="hljs-number">1</span>
+</code></pre>
+<h3 id="functions">Functions</h3>
+<p>A function is a block of code that only runs when it is called. You can pass data, known as parameters, into a function. A function can return data as a result.</p>
+<pre><code class="language-python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">square</span>(<span class="hljs-params">x</span>):
+    <span class="hljs-keyword">return</span> x * x
+
+<span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">1</span>, <span class="hljs-number">10</span>):
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">f&quot;The square of <span class="hljs-subst">{i}</span> is <span class="hljs-subst">{square(i)}</span>&quot;</span>)
+</code></pre>
+<p>The <code>def</code> keyword is used to define a function, followed by the function name and the parameters in the parenthesis. The block of code to be executed is indented.</p>
+<h3 id="modules-and-packages">Modules and Packages</h3>
+<p>A module is a file containing Python definitions and statements. The file name is the module name with the suffix .py appended. A package is a collection of modules.</p>
+<pre><code class="language-python"><span class="hljs-comment"># functions.py</span>
+<span class="hljs-keyword">def</span> <span class="hljs-title function_">square</span>(<span class="hljs-params">x</span>):
+    <span class="hljs-keyword">return</span> x * x
+
+<span class="hljs-comment"># main.py</span>
+<span class="hljs-keyword">import</span> functions
+
+<span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">1</span>, <span class="hljs-number">10</span>):
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">f&quot;The square of <span class="hljs-subst">{i}</span> is <span class="hljs-subst">{functions.square(i)}</span>&quot;</span>)
+</code></pre>
+<p>The <code>import</code> keyword is used to import a module or a package. The <code>as</code> keyword is used to give an alias to the module or package.</p>
+<h3 id="classes-and-objects">Classes and Objects</h3>
+<p>Python is an object-oriented programming language. Almost everything in Python is an object, with its properties and methods. A Class is like an object constructor, or a &quot;blueprint&quot; for creating objects. Objects are instances of classes, where classes are representations of real-world entities.</p>
+<pre><code class="language-python"><span class="hljs-comment"># Creating a cooridnate class</span>
+
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">Coordinate</span>:
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self, x, y</span>): <span class="hljs-comment"># The __init__ method is used to initialize the object with the given values</span>
+        self.x = x
+        self.y = y
+
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">distance</span>(<span class="hljs-params">self, other</span>):
+        x_diff = (self.x - other.x) ** <span class="hljs-number">2</span>
+        y_diff = (self.y - other.y) ** <span class="hljs-number">2</span>
+        <span class="hljs-keyword">return</span> (x_diff + y_diff) ** <span class="hljs-number">0.5</span>
+
+c1 = Coordinate(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>) <span class="hljs-comment"># Creating a new object of the class Coordinate</span>
+c2 = Coordinate(<span class="hljs-number">4</span>, <span class="hljs-number">6</span>)
+
+<span class="hljs-built_in">print</span>(c1.distance(c2))
+</code></pre>
+<p>Let's take a look at a more complex example.</p>
+<pre><code class="language-python"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Flight</span>:
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self, origin, destination, duration, capacity</span>):
+        self.origin = origin
+        self.destination = destination
+        self.duration = duration
+        self.capacity = capacity
+        self.passengers = []
+
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">add_passenger</span>(<span class="hljs-params">self, name</span>):
+        <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> self.capacity:
+            <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;The flight is full, cannot add more passengers&quot;</span>)
+            <span class="hljs-keyword">return</span>
+        self.passengers.append(name)
+        self.capacity -= <span class="hljs-number">1</span>
+        <span class="hljs-built_in">print</span>(<span class="hljs-string">f&quot;Added <span class="hljs-subst">{name}</span> to the flight successfully&quot;</span>)
+
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">print_info</span>(<span class="hljs-params">self</span>):
+        <span class="hljs-built_in">print</span>(<span class="hljs-string">f&quot;The flight from <span class="hljs-subst">{self.origin}</span> to <span class="hljs-subst">{self.destination}</span> is of <span class="hljs-subst">{self.duration}</span> minutes and has <span class="hljs-subst">{self.capacity}</span> seats left&quot;</span>)
+
+flight_1 = Flight(<span class="hljs-string">&quot;New York&quot;</span>, <span class="hljs-string">&quot;Paris&quot;</span>, <span class="hljs-number">540</span>, <span class="hljs-number">10</span>)
+
+passengers = [<span class="hljs-string">&quot;John&quot;</span>, <span class="hljs-string">&quot;Alice&quot;</span>, <span class="hljs-string">&quot;Bob&quot;</span>, <span class="hljs-string">&quot;Charlie&quot;</span>, <span class="hljs-string">&quot;David&quot;</span>, <span class="hljs-string">&quot;Eve&quot;</span>, <span class="hljs-string">&quot;Frank&quot;</span>, <span class="hljs-string">&quot;Grace&quot;</span>, <span class="hljs-string">&quot;Hannah&quot;</span>, <span class="hljs-string">&quot;Ivy&quot;</span>, <span class="hljs-string">&quot;Jack&quot;</span>, <span class="hljs-string">&quot;Katie&quot;</span>, <span class="hljs-string">&quot;Liam&quot;</span>, <span class="hljs-string">&quot;Mia&quot;</span>, <span class="hljs-string">&quot;Noah&quot;</span>, <span class="hljs-string">&quot;Olivia&quot;</span>, <span class="hljs-string">&quot;Parker&quot;</span>, <span class="hljs-string">&quot;Quinn&quot;</span>, <span class="hljs-string">&quot;Ryan&quot;</span>, <span class="hljs-string">&quot;Sophia&quot;</span>, <span class="hljs-string">&quot;Thomas&quot;</span>, <span class="hljs-string">&quot;Uma&quot;</span>, <span class="hljs-string">&quot;Victoria&quot;</span>, <span class="hljs-string">&quot;William&quot;</span>, <span class="hljs-string">&quot;Xander&quot;</span>, <span class="hljs-string">&quot;Yasmine&quot;</span>, <span class="hljs-string">&quot;Zachary&quot;</span>]
+
+<span class="hljs-keyword">for</span> passenger <span class="hljs-keyword">in</span> passengers:
+    flight_1.add_passenger(passenger)
+
+
+flight_1.print_info()
+
+</code></pre>
+<h3 id="decorators">Decorators</h3>
+<p>In python, functions are first-class objects, which means that they can be passed around and used as arguments.</p>
+<p>Decorators are a way to modify the behavior of a function or a class. Decorators allow us to wrap another function in order to extend the behavior of the wrapped function, without permanently modifying it.</p>
+<pre><code class="language-python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">decorator_function</span>(<span class="hljs-params">func</span>):
+    <span class="hljs-keyword">def</span> <span class="hljs-title function_">wrapper</span>():
+        <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Something is happening before the function is called.&quot;</span>)
+        func()
+        <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Something is happening after the function is called.&quot;</span>)
+    <span class="hljs-keyword">return</span> wrapper
+
+<span class="hljs-meta">@decorator_function</span>
+<span class="hljs-keyword">def</span> <span class="hljs-title function_">say_hello</span>():
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Hello!&quot;</span>)
+
+say_hello()
+</code></pre>
+<h3 id="lambda-functions">Lambda Functions</h3>
+<p>Lambda functions are small anonymous functions. They can have any number of arguments but only one expression.</p>
+<pre><code class="language-python">
+student_info = [
+    {<span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;John&quot;</span>, <span class="hljs-string">&quot;age&quot;</span>: <span class="hljs-number">20</span>},
+    {<span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;Alice&quot;</span>, <span class="hljs-string">&quot;age&quot;</span>: <span class="hljs-number">22</span>},
+    {<span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;Bob&quot;</span>, <span class="hljs-string">&quot;age&quot;</span>: <span class="hljs-number">21</span>},
+    {<span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;Charlie&quot;</span>, <span class="hljs-string">&quot;age&quot;</span>: <span class="hljs-number">23</span>},
+    {<span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;David&quot;</span>, <span class="hljs-string">&quot;age&quot;</span>: <span class="hljs-number">24</span>},
+    {<span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;Eve&quot;</span>, <span class="hljs-string">&quot;age&quot;</span>: <span class="hljs-number">25</span>},
+    {<span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;Frank&quot;</span>, <span class="hljs-string">&quot;age&quot;</span>: <span class="hljs-number">26</span>},
+    {<span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;Grace&quot;</span>, <span class="hljs-string">&quot;age&quot;</span>: <span class="hljs-number">27</span>},
+    {<span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;Hannah&quot;</span>, <span class="hljs-string">&quot;age&quot;</span>: <span class="hljs-number">28</span>},
+    {<span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;Ivy&quot;</span>, <span class="hljs-string">&quot;age&quot;</span>: <span class="hljs-number">29</span>},
+]
+
+<span class="hljs-comment"># We can&#x27;t use the sort method directly on the list of dictionaries because the sort method only works on lists of numbers or strings.</span>
+
+<span class="hljs-comment"># We can use the sorted function with the key argument to sort the list of dictionaries based on the age.</span>
+
+<span class="hljs-keyword">def</span> <span class="hljs-title function_">get_age</span>(<span class="hljs-params">student</span>):
+    <span class="hljs-keyword">return</span> student[<span class="hljs-string">&quot;age&quot;</span>]
+
+student_info.sort(key=get_age)
+
+<span class="hljs-built_in">print</span>(student_info)
+
+<span class="hljs-comment"># We can also use the lambda function to achieve the same result.</span>
+
+student_info.sort(key=<span class="hljs-keyword">lambda</span> student: student[<span class="hljs-string">&quot;age&quot;</span>])
+
+<span class="hljs-built_in">print</span>(student_info)
+
+</code></pre>
+<h3 id="exception-handling">Exception Handling</h3>
+<p>Python has many built-in exceptions that are raised when your program encounters an error (something in the program goes wrong), so that the program can handle the error in a specific way and not just crash.</p>
+<pre><code class="language-python">
+a = <span class="hljs-number">10</span>
+b = <span class="hljs-number">0</span>
+
+<span class="hljs-keyword">try</span>:
+    <span class="hljs-built_in">print</span>(a / b)
+<span class="hljs-keyword">except</span> ZeroDivisionError:
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;You cannot divide by zero&quot;</span>)
+<span class="hljs-keyword">finally</span>:
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;The program has ended&quot;</span>)
+</code></pre>
+<p>The <code>try</code> block lets you test a block of code for errors. The <code>except</code> block lets you handle the error. The <code>finally</code> block lets you execute code, regardless of the result of the try and except blocks.</p>
+
+            <script async src="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.js"></script>
+            
+        </body>
+        </html>
