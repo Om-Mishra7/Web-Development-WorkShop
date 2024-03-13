@@ -16,7 +16,8 @@
 }
 
 </style>
-            
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css">
+<link href="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.css" rel="stylesheet" type="text/css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
 <style>
@@ -388,19 +389,211 @@ This is an unordered list:
 <h3 id="css-selectors">CSS Selectors</h3>
 <p>CSS selectors are used to select the HTML elements we want to style, there are many types of selectors, some of the most commonly used ones are:</p>
 <ul>
-<li>Grouping Selector: This is used to group multiple selectors together, e.g. <code>h1, p, div</code>.</li>
-<li>Element Selector: This is used to select all the elements of a particular type, e.g. <code>h1</code>, <code>p</code>, <code>div</code>, etc.</li>
+<li>
+<p>Grouping Selector: This is used to group multiple selectors together, e.g. <code>h1, p, div</code>.</p>
+</li>
+<li>
+<p>Element Selector: This is used to select all the elements of a particular type, e.g. <code>h1</code>, <code>p</code>, <code>div</code>, etc.</p>
+</li>
+<li>
+<p>ID Selector: This is used to select an element with a particular ID, e.g. <code>#id-name</code>.</p>
+</li>
+<li>
+<p>Attribute Selector: This is used to select an element with a particular attribute, e.g. <code>input[type=&quot;text&quot;]</code>.</p>
+</li>
+<li></li>
+</ul>
+<pre><code class="language-css"><span class="hljs-selector-tag">a</span><span class="hljs-selector-attr">[href=<span class="hljs-string">&quot;https://www.google.com&quot;</span>]</span> {
+    <span class="hljs-attribute">color</span>: red;
+}
+</code></pre>
+<ul>
+<li>Pseudo-class Selector: This is used to select an element that is in a particular state, e.g. <code>a:hover</code>.</li>
+<li></li>
+</ul>
+<pre><code class="language-css"><span class="hljs-selector-tag">a</span><span class="hljs-selector-pseudo">:hover</span> {
+    <span class="hljs-attribute">color</span>: red;
+}
+</code></pre>
+<p>Let's say we want to apply different styles to three different headings, we would need to use the ID selector to select each heading and apply the styles.</p>
+<pre><code class="language-css"><span class="hljs-selector-id">#heading1</span> {
+    <span class="hljs-attribute">color</span>: red;
+    <span class="hljs-attribute">font-size</span>: <span class="hljs-number">20px</span>;
+}
+
+<span class="hljs-selector-id">#heading2</span> {
+    <span class="hljs-attribute">color</span>: blue;
+    <span class="hljs-attribute">font-size</span>: <span class="hljs-number">20px</span>;
+}
+
+<span class="hljs-selector-id">#heading3</span> {
+    <span class="hljs-attribute">color</span>: green;
+    <span class="hljs-attribute">font-size</span>: <span class="hljs-number">20px</span>;
+}
+</code></pre>
+<ul>
 <li>Class Selector: This is used to select elements with a particular class, e.g. <code>.class-name</code>.</li>
-<li>ID Selector: This is used to select an element with a particular ID, e.g. <code>#id-name</code>.</li>
+</ul>
+<p>Let's say we want to apply the same styles to multiple elements, we would need to use the class selector to
+select the elements and apply the styles.</p>
+<pre><code class="language-css"><span class="hljs-selector-class">.same-styles</span> {
+    <span class="hljs-attribute">color</span>: red;
+    <span class="hljs-attribute">font-size</span>: <span class="hljs-number">20px</span>;
+}
+</code></pre>
+<pre><code class="language-html"><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-keyword">html</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>HTML<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">&quot;stylesheet&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text/css&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;styles.css&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;heading1&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;same-styles&quot;</span>&gt;</span>This is a heading<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;heading2&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;same-styles&quot;</span>&gt;</span>This is a heading<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;heading3&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;same-styles&quot;</span>&gt;</span>This is a heading<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+</code></pre>
+<ul>
 <li>Descendant Selector: This is used to select an element that is a descendant of another element, e.g. <code>div p</code>.</li>
 <li>Child Selector: This is used to select an element that is a child of another element, e.g. <code>div &gt; p</code>.</li>
-<li>Attribute Selector: This is used to select elements with a particular attribute, e.g. <code>input[type=&quot;text&quot;]</code>.</li>
-<li>Pseudo-class Selector: This is used to select elements based on their state, e.g. <code>a:hover</code>.</li>
-<li>Pseudo-element Selector: This is used to select a part of an element, e.g. <code>p::first-line</code>.</li>
-<li>Universal Selector: This is used to select all the elements on the page, e.g. <code>*</code>.</li>
 </ul>
+<h3 id="css-specificity">CSS Specificity</h3>
+<p>As we have seen, there are many types of selectors in CSS, and sometimes we may have multiple selectors that apply to the same element, in such cases, the browser needs to decide which styles to apply, this is where specificity comes in.</p>
+<ul>
+<li>Inline</li>
+<li>ID</li>
+<li>Class</li>
+<li>Element</li>
+</ul>
+<p>The !important rule is a way to make your CSS cascade but also have the rules you feel are most crucial always be applied. A rule that has the !important property will always be applied no matter where that rule appears in the CSS document.</p>
+<h2 id="responsive-web-design">Responsive Web Design</h2>
+<p>Another thing we can use CSS for is to make our web pages responsive, this means that the web page should look good on all devices, e.g. mobile, tablet, desktop, etc.</p>
+<h3 id="viewport">Viewport</h3>
+<p>The viewport is the user's visible area of a web page, it varies with the device, and will be smaller on a mobile phone than on a computer screen, but generally mobile devices spoof the viewport to be the same as a desktop browser. This was done as many websites were not optimized for mobile devices and would look very small on a mobile device.</p>
+<p>To control the viewport, we can use the <code>&lt;meta&gt;</code> tag in the <code>&lt;head&gt;</code> tag of the HTML document, an example of the viewport meta tag is:</p>
+<pre><code class="language-html"><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-keyword">html</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>HTML<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;viewport&quot;</span> <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;width=device-width, initial-scale=1.0&quot;</span>&gt;</span> <span class="hljs-comment">&lt;!-- This sets the width of the viewport to the width of the device instead of the width of the browser window --&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>This is a heading<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>This is a paragraph<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+</code></pre>
+<h3 id="media-queries">Media Queries</h3>
+<p>Media queries are used to apply different styles for different devices, e.g. we may want to apply different styles for mobile devices and desktop devices.</p>
+<p>An example of a media query is:</p>
+<pre><code class="language-css"><span class="hljs-comment">/* This is the default style for all devices */</span>
+<span class="hljs-selector-tag">h1</span> {
+    <span class="hljs-attribute">color</span>: red;
+    <span class="hljs-attribute">font-size</span>: <span class="hljs-number">20px</span>;
+}
 
-            
+<span class="hljs-comment">/* This is the style for devices with a width of 600px or less */</span>
+<span class="hljs-keyword">@media</span> <span class="hljs-keyword">only</span> screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">max-width</span>: <span class="hljs-number">600px</span>) {
+    <span class="hljs-selector-tag">h1</span> {
+        <span class="hljs-attribute">color</span>: blue;
+        <span class="hljs-attribute">font-size</span>: <span class="hljs-number">10px</span>;
+    }
+}
+</code></pre>
+<h3 id="flexbox">Flexbox</h3>
+<p>Flexbox is a layout model that allows us to design a responsive layout, it's a one-dimensional layout method for laying out items in rows or columns, it's useful for laying out items in a single row or column, and it's also useful for laying out items in a row or column that need to be the same height.</p>
+<p>An example of using flexbox is:</p>
+<pre><code class="language-css"><span class="hljs-selector-class">.container</span> {
+    <span class="hljs-attribute">display</span>: flex;
+    <span class="hljs-attribute">justify-content</span>: space-between; <span class="hljs-comment">/* This property is used to distribute the items evenly */</span>
+    <span class="hljs-attribute">align-items</span>: center; <span class="hljs-comment">/* This property is used to align the items vertically */</span>
+    <span class="hljs-attribute">flex-wrap</span>: wrap; <span class="hljs-comment">/* This property is used to wrap the items to the next line */</span>
+}
+
+<span class="hljs-selector-class">.item</span> {
+    <span class="hljs-attribute">flex</span>: <span class="hljs-number">1</span>; <span class="hljs-comment">/* This property is used to make the items take up the same amount of space */</span>
+}
+</code></pre>
+<pre><code class="language-html"><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-keyword">html</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>HTML<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">&quot;stylesheet&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text/css&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;styles.css&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;container&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;item&quot;</span>&gt;</span>Item
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;item&quot;</span>&gt;</span>Item
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;item&quot;</span>&gt;</span>Item
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+</code></pre>
+<h2 id="saas-syntactically-awesome-style-sheets">SAAS (Syntactically Awesome Style Sheets)</h2>
+<p>Sass is a preprocessor scripting language that is interpreted or compiled into CSS, it's a superset of CSS, meaning that it contains all the features of CSS and more.</p>
+<h3 id="variables">Variables</h3>
+<p>Variables are used to store information that can be reused throughout the stylesheet, this is useful for storing things like colors, font stacks, or any value that is repeated throughout the stylesheet.</p>
+<p>An example of using variables is:</p>
+<pre><code class="language-scss"><span class="hljs-variable">$primary-color</span>: <span class="hljs-number">#ff0000</span>;
+<span class="hljs-variable">$secondary-color</span>: <span class="hljs-number">#00ff00</span>;
+
+<span class="hljs-selector-tag">h1</span> {
+    <span class="hljs-attribute">color</span>: <span class="hljs-variable">$primary-color</span>;
+}
+
+<span class="hljs-selector-tag">p</span> {
+    <span class="hljs-attribute">color</span>: <span class="hljs-variable">$secondary-color</span>;
+}
+
+</code></pre>
+<p>Unlike SAAS can't run directly in the browser, it needs to be compiled into CSS, this can be done using a build tool like Webpack, Gulp, etc.</p>
+<h3 id="nesting">Nesting</h3>
+<p>Sass allows us to nest our CSS selectors in a way that follows the same visual hierarchy of our HTML, this is useful for keeping our code organized and making it easier to read.</p>
+<p>An example of using nesting is:</p>
+<pre><code class="language-scss"><span class="hljs-selector-tag">nav</span> {
+    <span class="hljs-selector-tag">ul</span> {
+        <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span>;
+        <span class="hljs-attribute">padding</span>: <span class="hljs-number">0</span>;
+        <span class="hljs-attribute">list-style</span>: none;
+    }
+
+    <span class="hljs-selector-tag">li</span> {
+        <span class="hljs-attribute">display</span>: inline;
+    }
+
+    <span class="hljs-selector-tag">a</span> {
+        <span class="hljs-attribute">text-decoration</span>: none;
+    }
+}
+</code></pre>
+<h3 id="inheritance">Inheritance</h3>
+<p>Sass allows us to use inheritance to share properties between selectors, this is useful for keeping our code DRY (Don't Repeat Yourself).</p>
+<p>An example of using inheritance is:</p>
+<pre><code class="language-scss">%<span class="hljs-selector-tag">button</span> {
+    <span class="hljs-attribute">border</span>: none;
+    <span class="hljs-attribute">padding</span>: <span class="hljs-number">10px</span> <span class="hljs-number">20px</span>;
+    <span class="hljs-attribute">font-size</span>: <span class="hljs-number">16px</span>;
+}
+
+
+<span class="hljs-selector-class">.primary-button</span> {
+    <span class="hljs-keyword">@extend</span> %button;
+    <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#ff0000</span>;
+    <span class="hljs-attribute">color</span>: <span class="hljs-number">#ffffff</span>;
+}
+
+<span class="hljs-selector-class">.secondary-button</span> {
+    <span class="hljs-keyword">@extend</span> %button;
+    <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#00ff00</span>;
+    <span class="hljs-attribute">color</span>: <span class="hljs-number">#ffffff</span>;
+}
+</code></pre>
+
+            <script async src="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.js"></script>
             
         </body>
         </html>
