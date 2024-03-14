@@ -18,4 +18,10 @@ def add():
         return redirect(url_for('index'), code=302)     
     return render_template('add.html')
 
+@app.route('/delete/<index>')
+def delete(index):
+    index = int(index) - 1
+    session['tasks'] = session['tasks'][:int(index)] + session['tasks'][int(index)+1:]
+    return redirect(url_for('index'), code=302)
+
 app.run(debug=True)

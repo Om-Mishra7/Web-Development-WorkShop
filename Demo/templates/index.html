@@ -4,7 +4,7 @@
 {% block content %}
 
 {% for task in tasks %}
-<p>{{ task }}</p>
+<p>{{ task }} <a href = "/delete/{{ loop.index }}">Delete</a></p>
 {% endfor %}
 <button><a href="/add">Add Task</a></button>
 
