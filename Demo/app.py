@@ -17,7 +17,7 @@ app.config['SECRET_KEY'] = 'mysecret'
 @app.route('/')
 def index():
     if "logged_in" not in session:
-        return redirect(url_for('sign_up'), code=302)
+        return redirect(url_for('sign_in'), code=302)
     if 'tasks' not in session:
         session['tasks'] = []
     return render_template('index.html', tasks=session['tasks'])
