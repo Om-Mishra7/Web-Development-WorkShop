@@ -18,9 +18,10 @@ app.config['SECRET_KEY'] = 'mysecret'
 def index():
     if "logged_in" not in session:
         return redirect(url_for('sign_in'), code=302)
-    if 'tasks' not in session:
-        session['tasks'] = []
-    return render_template('index.html', tasks=session['tasks'])
+
+    user_data = mongodb_database.users.find_one({'email': session['email']})
+    tasks_list = user_data['tasks']
+    return render_template('index.html', tasks=tasks_list)
 
 @app.route('/add', methods=['GET', 'POST'])
 def add():
@@ -28,17 +29,9 @@ def add():
         return redirect(url_for('sign_up'), code=302)
     if request.method == "POST":
         task = request.form['task']
-        session['tasks'] += [task]
+        mongodb_database.users.update_one({'email': session['email']}, {'$push': {'tasks': task}})
         return redirect(url_for('index'), code=302)     
     return render_template('add.html')
-
-@app.route('/delete/<index>')
-def delete(index):
-    if "logged_in" not in session:
-        return redirect(url_for('sign_up'), code=302)
-    index = int(index) - 1
-    session['tasks'] = session['tasks'][:int(index)] + session['tasks'][int(index)+1:]
-    return redirect(url_for('index'), code=302)
 
 @app.route('/sign-up', methods=['GET', 'POST'])
 def sign_up():
@@ -50,7 +43,7 @@ def sign_up():
         if mongodb_database.users.find_one({'email': email}):
             return 'User already exists'
         else:
-            mongodb_database.users.insert_one({'name': name, 'email': email, 'password': password})
+            mongodb_database.users.insert_one({'name': name, 'email': email, 'password': password, 'tasks': []})
             return redirect(url_for('index'), code=302)
     return render_template('sign-up.html')
 
@@ -59,10 +52,13 @@ def sign_in():
     if request.method == "POST":
         email = request.form['email']
         password = request.form['password']
+        print(email, password)
 
-        user = mongodb_database.users.find_one({'email ': email, 'password': password})
-        if user:
+        user = mongodb_database.users.find({'email': email, 'password': password})
+        print(user)
+        if user is not None:
             session['logged_in'] = True
+            session['email'] = email
             return redirect(url_for('index'), code=302)
         else:
             return 'Invalid credentials'
