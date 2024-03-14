@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+        <html>
+        <head>
+            <meta charset="UTF-8">
+            <title>Web Development Workshop - Hack On Campus &verbar; K&period;R&period; Mangalam University</title>
+            <style>
+/* From extension vscode.github */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.vscode-dark img[src$=\#gh-light-mode-only],
+.vscode-light img[src$=\#gh-dark-mode-only] {
+	display: none;
+}
+
+</style>
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css">
+<link href="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+<style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        <style>
+.task-list-item {
+    list-style-type: none;
+}
+
+.task-list-item-checkbox {
+    margin-left: -20px;
+    vertical-align: middle;
+    pointer-events: none;
+}
+</style>
+<style>
+:root {
+  --color-note: #0969da;
+  --color-tip: #1a7f37;
+  --color-warning: #9a6700;
+  --color-severe: #bc4c00;
+  --color-caution: #d1242f;
+  --color-important: #8250df;
+}
+
+</style>
+<style>
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-note: #2f81f7;
+    --color-tip: #3fb950;
+    --color-warning: #d29922;
+    --color-severe: #db6d28;
+    --color-caution: #f85149;
+    --color-important: #a371f7;
+  }
+}
+
+</style>
+<style>
+.markdown-alert {
+  padding: 0.5rem 1rem;
+  margin-bottom: 16px;
+  color: inherit;
+  border-left: .25em solid #888;
+}
+
+.markdown-alert>:first-child {
+  margin-top: 0
+}
+
+.markdown-alert>:last-child {
+  margin-bottom: 0
+}
+
+.markdown-alert .markdown-alert-title {
+  display: flex;
+  font-weight: 500;
+  align-items: center;
+  line-height: 1
+}
+
+.markdown-alert .markdown-alert-title .octicon {
+  margin-right: 0.5rem;
+  display: inline-block;
+  overflow: visible !important;
+  vertical-align: text-bottom;
+  fill: currentColor;
+}
+
+.markdown-alert.markdown-alert-note {
+  border-left-color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-note .markdown-alert-title {
+  color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-important {
+  border-left-color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-important .markdown-alert-title {
+  color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-warning {
+  border-left-color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-warning .markdown-alert-title {
+  color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-tip {
+  border-left-color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-tip .markdown-alert-title {
+  color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-caution {
+  border-left-color: var(--color-caution);
+}
+
+.markdown-alert.markdown-alert-caution .markdown-alert-title {
+  color: var(--color-caution);
+}
+
+</style>
+        
+        </head>
+        <body class="vscode-body vscode-light">
+            <h1 id="web-development-workshop---hack-on-campus--kr-mangalam-university">Web Development Workshop - Hack On Campus | K.R. Mangalam University</h1>
+<p>Organized by: Om Mishra | <a href="https://github.com/Om-Mishra7">GitHub</a> and Yash Soni | <a href="https://github.com/Yash-Soni774">GitHub</a></p>
+<h2 id="mongodb">MongoDB</h2>
+<h3 id="what-is-mongodb">What is MongoDB?</h3>
+<p>MongoDB is a cross-platform document-oriented database program. Classified as a NoSQL database program, MongoDB uses JSON-like documents with optional schemas.</p>
+<h3 id="why-mongodb">Why MongoDB?</h3>
+<ul>
+<li>MongoDB is a NoSQL database, which means it is a non-relational database. It is a database that does not require a fixed schema, avoids joins, and is easy to scale.</li>
+<li>MongoDB is a document-oriented database, which means it stores data in JSON-like documents.</li>
+<li>MongoDB is a distributed database at its core, so high availability, horizontal scaling, and geographic distribution are built in and easy to use.</li>
+</ul>
+<h3 id="mongodb-with-flask">MongoDB With Flask</h3>
+<h4 id="installation">Installation</h4>
+<ul>
+<li>Get URI from <a href="https://www.mongodb.com/cloud/atlas">MongoDB Atlas</a></li>
+<li>Install pymongo using pip</li>
+</ul>
+<pre><code class="language-bash">pip install pymongo
+</code></pre>
+<h4 id="usage">Usage</h4>
+<pre><code class="language-python"><span class="hljs-keyword">import</span> pymongo
+<span class="hljs-keyword">from</span> flask <span class="hljs-keyword">import</span> Flask, request, jsonify
+
+app = Flask(__name__)
+
+<span class="hljs-comment"># Connect to MongoDB</span>
+client = pymongo.MongoClient(<span class="hljs-string">&quot;URI&quot;</span>)
+db = client.get_database(<span class="hljs-string">&quot;test&quot;</span>)
+
+<span class="hljs-meta">@app.route(<span class="hljs-params"><span class="hljs-string">&#x27;/add&#x27;</span>, methods=[<span class="hljs-string">&#x27;POST&#x27;</span>]</span>)</span>
+<span class="hljs-keyword">def</span> <span class="hljs-title function_">add</span>():
+    data = request.json
+    db.get_collection(<span class="hljs-string">&quot;test&quot;</span>).insert_one(data)
+    <span class="hljs-keyword">return</span> jsonify({<span class="hljs-string">&quot;message&quot;</span>: <span class="hljs-string">&quot;Data added successfully&quot;</span>})
+
+<span class="hljs-meta">@app.route(<span class="hljs-params"><span class="hljs-string">&#x27;/get&#x27;</span>, methods=[<span class="hljs-string">&#x27;GET&#x27;</span>]</span>)</span>
+<span class="hljs-keyword">def</span> <span class="hljs-title function_">get</span>():
+    data = db.get_collection(<span class="hljs-string">&quot;test&quot;</span>).find()
+    <span class="hljs-keyword">return</span> jsonify({<span class="hljs-string">&quot;data&quot;</span>: <span class="hljs-built_in">list</span>(data)})
+</code></pre>
+<h3 id="mongodb-atlas">MongoDB Atlas</h3>
+<ul>
+<li>MongoDB Atlas is a fully-managed cloud database developed by the same people that build MongoDB. It is a database as a service offering that runs on the cloud, and it is designed to be secure, scalable, and reliable.</li>
+</ul>
+<h4 id="steps-to-create-a-cluster">Steps to create a cluster</h4>
+<ul>
+<li>Go to <a href="https://www.mongodb.com/cloud/atlas">MongoDB Atlas</a></li>
+<li>Sign up and create a new cluster</li>
+<li>Choose a cloud provider and region</li>
+<li>Create a cluster</li>
+<li>Create a database user</li>
+<li>Whitelist your IP address</li>
+<li>Connect to your cluster</li>
+<li>Choose a connection method</li>
+<li>Connect your application</li>
+</ul>
+<h3 id="mongodb-compass">MongoDB Compass</h3>
+<ul>
+<li>MongoDB Compass is the GUI for MongoDB. It allows you to explore your databases, run queries, and interact with your data with full CRUD functionality.</li>
+</ul>
+<h4 id="mongodb-commands-in-pymongo">MongoDB Commands in pymongo</h4>
+<ul>
+<li>Insert a document</li>
+</ul>
+<pre><code class="language-python">db.get_collection(<span class="hljs-string">&quot;test&quot;</span>).insert_one({<span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;Om Mishra&quot;</span>})
+</code></pre>
+<ul>
+<li>Find a document</li>
+</ul>
+<pre><code class="language-python">data = db.get_collection(<span class="hljs-string">&quot;test&quot;</span>).find_one({<span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;Om Mishra&quot;</span>})
+</code></pre>
+<ul>
+<li>Update a document</li>
+</ul>
+<pre><code class="language-python">db.get_collection(<span class="hljs-string">&quot;test&quot;</span>).update_one({<span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;Om Mishra&quot;</span>}, {<span class="hljs-string">&quot;$set&quot;</span>: {<span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;
+Yash Soni&quot;</span>}})
+</code></pre>
+<ul>
+<li>Delete a document</li>
+</ul>
+<pre><code class="language-python">db.get_collection(<span class="hljs-string">&quot;test&quot;</span>).delete_one({<span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;Yash Soni&quot;</span>})
+</code></pre>
+<ul>
+<li>Drop a collection</li>
+</ul>
+<pre><code class="language-python">db.get_collection(<span class="hljs-string">&quot;test&quot;</span>).drop()
+</code></pre>
+<ul>
+<li>Drop a database</li>
+</ul>
+<pre><code class="language-python">client.drop_database(<span class="hljs-string">&quot;test&quot;</span>)
+</code></pre>
+
+            <script async src="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.js"></script>
+            
+        </body>
+        </html>
