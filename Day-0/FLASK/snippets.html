@@ -448,36 +448,45 @@ tasks = [<span class="hljs-string">&quot;Complete the assignment&quot;</span>, <
     <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
 {% endblock %}
 </code></pre>
-<pre><code class="language-python"><span class="hljs-keyword">from</span> flask <span class="hljs-keyword">import</span> Flask, render_template, request, redirect, url_for
-app = Flask(__name__)
+<pre><code class="language-python"><span class="hljs-keyword">from</span> flask <span class="hljs-keyword">import</span> Flask, render_template, request, redirect, url_for, session
 
-tasks = [<span class="hljs-string">&quot;Complete the assignment&quot;</span>, <span class="hljs-string">&quot;Go to the gym&quot;</span>, <span class="hljs-string">&quot;Buy groceries&quot;</span>]
+app = Flask(__name__)
+app.secret_key = <span class="hljs-string">&#x27;your_secret_key_here&#x27;</span>  <span class="hljs-comment"># Add a secret key for session security</span>
+
+<span class="hljs-meta">@app.before_first_request</span>
+<span class="hljs-keyword">def</span> <span class="hljs-title function_">before_first_request</span>():
+    session.setdefault(<span class="hljs-string">&#x27;tasks&#x27;</span>, [])
 
 <span class="hljs-meta">@app.route(<span class="hljs-params"><span class="hljs-string">&#x27;/&#x27;</span></span>)</span>
 <span class="hljs-keyword">def</span> <span class="hljs-title function_">index</span>():
+    tasks = session.get(<span class="hljs-string">&#x27;tasks&#x27;</span>, [])
     <span class="hljs-keyword">return</span> render_template(<span class="hljs-string">&#x27;index.html&#x27;</span>, tasks=tasks)
 
 <span class="hljs-meta">@app.route(<span class="hljs-params"><span class="hljs-string">&#x27;/add&#x27;</span>, methods=[<span class="hljs-string">&#x27;GET&#x27;</span>, <span class="hljs-string">&#x27;POST&#x27;</span>]</span>)</span>
 <span class="hljs-keyword">def</span> <span class="hljs-title function_">add</span>():
-    <span class="hljs-keyword">if</span> request.method == <span class="hljs-string">&#x27;POST&#x27;</span>: <span class="hljs-comment"># The request object has a method attribute that contains the method used by the client</span>
-        task = request.form[<span class="hljs-string">&#x27;task&#x27;</span>]
-        tasks.append(task)
-        <span class="hljs-keyword">return</span> redirect(url_for(<span class="hljs-string">&#x27;index&#x27;</span>), code=<span class="hljs-number">302</span>)
+    <span class="hljs-keyword">if</span> request.method == <span class="hljs-string">&#x27;POST&#x27;</span>:
+        task = request.form.get(<span class="hljs-string">&#x27;task&#x27;</span>)
+        <span class="hljs-keyword">if</span> task:
+            session[<span class="hljs-string">&#x27;tasks&#x27;</span>].append(task)
+            <span class="hljs-keyword">return</span> redirect(url_for(<span class="hljs-string">&#x27;index&#x27;</span>))
     <span class="hljs-keyword">return</span> render_template(<span class="hljs-string">&#x27;add.html&#x27;</span>)
 
 <span class="hljs-meta">@app.route(<span class="hljs-params"><span class="hljs-string">&#x27;/delete/&lt;task&gt;&#x27;</span></span>)</span>
 <span class="hljs-keyword">def</span> <span class="hljs-title function_">delete</span>(<span class="hljs-params">task</span>):
-    tasks.remove(task)
+    tasks = session.get(<span class="hljs-string">&#x27;tasks&#x27;</span>, [])
+    <span class="hljs-keyword">if</span> task <span class="hljs-keyword">in</span> tasks:
+        tasks.remove(task)
+        session[<span class="hljs-string">&#x27;tasks&#x27;</span>] = tasks
     <span class="hljs-keyword">return</span> redirect(url_for(<span class="hljs-string">&#x27;index&#x27;</span>))
 
 <span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">&#x27;__main__&#x27;</span>:
-    app.run()
+    app.run(debug=<span class="hljs-literal">True</span>)
 </code></pre>
 <h3 id="session">Session</h3>
 <p>In the current implementation, if we close the web browser and open it again, the tasks will be lost, as well as all users will see the same tasks. We can use the <code>session</code> to store the tasks to a user.</p>
 <pre><code class="language-python"><span class="hljs-keyword">from</span> flask <span class="hljs-keyword">import</span> Flask, render_template, request, redirect, url_for, session   
 app = Flask(__name__)
-app.secret = <span class="hljs-string">&#x27;secret&#x27;</span> <span class="hljs-comment"># This is the secret key used to sign the session cookie</span>
+app.config[<span class="hljs-string">&#x27;SECRET_KEY&#x27;</span>] = <span class="hljs-string">&#x27;key&#x27;</span> <span class="hljs-comment"># This is the secret key, you can change it to anything you want</span>
 
 app.config[<span class="hljs-string">&#x27;SESSION_TYPE&#x27;</span>] = <span class="hljs-string">&#x27;filesystem&#x27;</span> <span class="hljs-comment"># This is the type of session, we are using filesystem here, you can use other types as well</span>
 

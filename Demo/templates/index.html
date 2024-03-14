@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+
+{% for task in tasks %}
+<p>{{ task }}</p>
+{% endfor %}
+<button><a href="/add">Add Task</a></button>
+
+{% endblock %}

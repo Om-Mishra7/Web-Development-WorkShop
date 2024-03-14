@@ -389,30 +389,40 @@ Let's add the functionality to add and delete tasks.
 ```
 
 ```python
-from flask import Flask, render_template, request, redirect, url_for
-app = Flask(__name__)
+from flask import Flask, render_template, request, redirect, url_for, session
 
-tasks = ["Complete the assignment", "Go to the gym", "Buy groceries"]
+app = Flask(__name__)
+app.secret_key = 'your_secret_key_here'  # Add a secret key for session security
+
+@app.before_request
+def before_request():
+    if 'tasks' not in session:
+        session['tasks'] = []
 
 @app.route('/')
 def index():
+    tasks = session.get('tasks', [])
     return render_template('index.html', tasks=tasks)
 
 @app.route('/add', methods=['GET', 'POST'])
 def add():
-    if request.method == 'POST': # The request object has a method attribute that contains the method used by the client
-        task = request.form['task']
-        tasks.append(task)
-        return redirect(url_for('index'), code=302)
+    if request.method == 'POST':
+        task = request.form.get('task')
+        if task:
+            session['tasks'].append(task)
+            return redirect(url_for('index'))
     return render_template('add.html')
 
 @app.route('/delete/<task>')
 def delete(task):
-    tasks.remove(task)
+    tasks = session.get('tasks', [])
+    if task in tasks:
+        tasks.remove(task)
+        session['tasks'] = tasks
     return redirect(url_for('index'))
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)
 ```
 
 ### Session
@@ -422,7 +432,7 @@ In the current implementation, if we close the web browser and open it again, th
 ```python
 from flask import Flask, render_template, request, redirect, url_for, session   
 app = Flask(__name__)
-app.secret = 'secret' # This is the secret key used to sign the session cookie
+app.config['SECRET_KEY'] = 'key' # This is the secret key, you can change it to anything you want
 
 app.config['SESSION_TYPE'] = 'filesystem' # This is the type of session, we are using filesystem here, you can use other types as well
 
